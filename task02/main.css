@@ -1,0 +1,97 @@
+.registration {
+left: -330px;
+top: -200px;
+margin:auto;
+width: 358px;/*Сам размер рамки 400х448 (но из-за того что размер учитывается с padding и рамкой ужал _-22px-*/
+height: 406px;
+padding:20px;
+border: 2px solid #626262;
+border-radius:3px;
+background-color: #9C9C9C;
+font-family: Roboto;
+	
+}
+
+h1 {
+	margin: 0px 20px 20px 0px;
+	font-size:32px;
+	line-height: 38px;
+}
+
+hr {
+	margin: 20px -20px 0px -20px ;
+	border: none; 
+    color: #c4c4c4; 
+    background-color: #c4c4c4; /* Цвет для браузера Firefox и Opera */
+    height: 1px;
+}
+
+fieldset{		
+	border:none;
+	padding: 20px 0px 0px 0px;
+	margin:0 auto;
+	font-size:14px;
+	line-height: 16px;
+}
+
+span {
+	display: block;
+	color:#3a3a3a;
+	margin-bottom: 5px;
+}
+
+input {
+	width: 151px;/*вычитаю pad и border*/
+	padding: 6px 10px 6px 10px;
+	border: none;
+	border-radius:3px;
+	outline:none;
+}
+
+table{
+	width: 100%;
+}
+
+
+/*placeholder для разных браузеров*/
+::-webkit-input-placeholder {color:#cccccc;}
+::-moz-placeholder          {color:#cccccc;}/* Firefox 19+ */
+:-moz-placeholder           {color:#cccccc;}/* Firefox более старый*/
+:-ms-input-placeholder      {color:#cccccc;}
+
+
+.fullfield {/*полное поле элемента*/
+	width: 338px;/*вычитаю pad и border*/	
+}
+
+#pass {/*стиль ячейки окна пароля*/
+	padding-left: 0px;	
+}
+
+#repeatpass {/*стиль ячейки окна повторного пароля*/
+	padding-right: 0px;
+	float: right;
+}
+
+#send {/*кнопка Отправить*/
+width: 95px;
+height: 32px;
+background-color: #616161; 
+padding: 8px 12px 8px 12px;
+text-align: center;
+color: #CCCCCC;
+border-radius: 3px;
+cursor: pointer;
+}
+
+#cancel {/*Кнопка отмена*/
+float:right;
+width: 74px;
+height: 32px;
+background-color: #CCCCCC; 
+padding: 8px 12px 8px 12px;
+color: #616161;
+border-radius: 3px;
+text-align: center;
+cursor: pointer;
+}
