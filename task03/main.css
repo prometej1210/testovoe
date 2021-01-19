@@ -1,0 +1,64 @@
+#step {/*контейнер для степпера*/
+	margin:auto;
+	text-align: center;
+	font-family: Roboto;
+	font-size:22px;
+	line-height: 26px;
+}
+
+
+li {
+  display: inline-block;
+  position: relative;
+  width: 254px;
+  background:linear-gradient(180deg, #686868 0%, #B3B3B3 50.52%, #686868 100%);
+  margin-right: 4px;/*отступ от краев до конца стрелочки*/  
+  padding: 12px 0px 12px 0px;
+  color:white;
+  text-shadow: 0px 0px 4px  #000;
+  cursor:pointer;
+}
+
+li:first-child:before {/*стираю первому потомку стиль левого бордера*/
+  border: 0 none;
+}
+
+li:before {/*стиль бордера слева*/
+  content:"";/*генерирую содержимое*/
+  position: absolute;
+  top: 0;
+  border-left: 12px solid white;/*вырисовываю по точкам бордер*/
+  border-bottom: 25px inset transparent;
+  border-top: 25px inset transparent;
+  width: 0;
+  left: 0;
+}
+
+li:after {/*стрелочка дорисовывается справа*/
+  content: "";
+  position: absolute;
+  transform: scaleX(0.5) rotate(45deg);/*пропорции вычислил по углам четырехугол*/
+  height: 36px;
+  width: 36px;
+  right:-18px;
+  top:7px;
+  z-index: 1000;  
+  background:linear-gradient(135deg, #686868 0%, #B3B3B3 50.52%, #686868 100%);
+}
+
+li:last-child:after {/*последнему потомку стираю свойства крайнего правого наполнения*/
+  content: none;
+}
+
+li:active{
+background:linear-gradient(180deg, #2EA239 0%, #62FD71 50.52%, #2EA139 100%);
+text-shadow: 1px 0 1px #000, /*со всех сторон делаю обводку тенью*/
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+
+}
+
+li:active:after{   
+  background:linear-gradient(135deg, #2EA239 0%, #62FD71 50.52%, #2EA139 100%);
+}
